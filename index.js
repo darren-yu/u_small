@@ -25,7 +25,7 @@ app.get("/thanks", function(req, res) {
 
 app.post("/create", function(req, res) {
 
-		
+
 		db.User.findOrCreate({where: req.body}).done(function(err, data, wasMade) {
 		if (wasMade) {
 			var encrypt = hashids.encode(data.id);
@@ -91,6 +91,6 @@ app.get("/:ranId", function(req, res) {
 // });
 
 
-
-app.listen(3000);
+// heroku uses another port, for developers we typically use 3000
+app.listen(process.env.PORT || 3000);
 
