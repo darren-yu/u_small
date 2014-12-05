@@ -45,7 +45,7 @@ app.post("/create", function(req, res) {
 app.get("/:ranId", function(req, res) {
 	db.User.find({where: {random_id: req.params.ranId}}).done(function(err, data) {
 		// res.redirect("http://" + data.url);
-		res.redirect("http://" + data.url);		
+		res.redirect(data.url);		
 	})
 })
 
