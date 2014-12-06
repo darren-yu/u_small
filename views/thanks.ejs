@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Thank You</title>
 </head>
 <body>
-	<h3>Thanks!</h3>
-	<p>Your URL input: <%=oldURL %></p>
+	<div class="container">
+		<div class"row">
+			<div class="col-md-12" id="first">
+				<h3>Thanks!</h3>
+			</div>
+			<div class="col-md-12">
+				<p>Your URL input: <%=oldURL %></p>
+			</div>
+			<div class="col-md-12">
 
-	<p>Your generated small url is: <a href="/<%=key %>">http://usmall.herokuapp.com/<%=key %></a></p>
-	<!-- <p>Your generated small url is: <a href="/<%=key %>"><%=key %></a></p> -->
+				<!-- production script below -->
+				<p>Your shrinked url is: <a href="/<%=key %>">http://usmall.herokuapp.com/<%=key %></a></p>
 
-
+				<!-- local host testing script below-->
+				<!-- <p>Your generated small url is: <a href="/<%=key %>"><%=key %></a></p> -->
+			</div>
+		</div>
+	</div>
 </body>
 </html>
